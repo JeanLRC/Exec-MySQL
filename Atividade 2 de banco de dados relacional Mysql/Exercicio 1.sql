@@ -3,8 +3,8 @@ CREATE DATABASE db_generation_game_online;
 
 		-- Selecionando o Banco
 USE db_generation_game_online;
-/*		Criando as tabelas
 
+/*		 Criando as tabelas		*/
 		-- Criando a tabela classe
 CREATE TABLE tb_classe(
 	id BIGINT(8) AUTO_INCREMENT,
@@ -26,9 +26,9 @@ CREATE TABLE tb_personagem(
     PRIMARY KEY (id),
     FOREIGN KEY (classe_id) REFERENCES tb_classe (id)
 );
-*/
 
-/*		Populando as tabelas
+
+/*		Populando as tabelas		*/
 
 		-- Populando a tabela de classes
 INSERT INTO tb_classe (nome, habilidade, beneficio)
@@ -47,7 +47,7 @@ INSERT INTO tb_classe (nome, habilidade, beneficio)
         ("Kevamros Droverson", 32, "Orc", 1, 4500, 3700),
         ("Thulgus Strongforge", 40, "Anão", 4, 3800, 3500),
         ("Bran Faringray", 47, "Humano", 4, 2600, 3700);
-*/
+
 
 		-- Fazendo o SELECT de personagens com poder de ataque maior que 2000
 SELECT * FROM tb_personagem WHERE poder_ataque > 2000;
